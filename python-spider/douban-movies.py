@@ -20,7 +20,6 @@ class MovieParser(HTMLParser):
             movie['director'] = _attr(attrs, 'data-director')
             movie['actors'] = _attr(attrs, 'data-actors')
             self.movies.append(movie)
-            # print('%s(title)s|%(score)s|%(director)s|%(actors)s' % movie)
             print('%s | %s | %s | %s' % (movie['title'], movie['score'], movie['director'], movie['actors']))
 
 def nowplaying_movies(url):
